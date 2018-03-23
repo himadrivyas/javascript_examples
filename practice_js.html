@@ -16,8 +16,35 @@
 </head>
 
 <body>
-	<p>Today's Date is:<span id="day"></span></p>
-	<p>Current Time is:<span id="time"></span></p>
+  <!-- Question 1 Find the current time and day -->
+  <button type="button" id="time">Check current time & day</button>
+	<div class="hidden">
+    <p>Today is:<span id="day"></span></p>
+    <p>Current Time is:<span class="time"></span></p>
+  </div>
+  <!-- Question 2 Print the current web page -->
+  <div class="top">
+    <a href="#" id="print">Print the current page</a>
+  </div>
+  <!-- Q3 Print current date -->
+  <div>
+    <button type="button" id="date" class="top">Today's Date</button>
+    <p class="date"></p>
+  </div>
+<!-- Q4 Calculate Area of Triangle -->
+<div>
+  <p>Enter length of triangle sides</p>
+  <form>
+    <label>First side length</label><br>
+    <input type="text" name="first"><br>
+    <label>Second side length</label><br>
+    <input type="text" name="second"><br>
+    <label>Third side length</label><br>
+    <input type="text" name="third"><br>
+    <input class="top area" type="submit" value="submit">
+  </form>
+</div>
+
   <script src="js/main.js"></script>
 </body>
 </html>
