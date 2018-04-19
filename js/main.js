@@ -52,16 +52,21 @@ function showDate(){
 	document.querySelector('.date').innerHTML = date+'/'+month+'/'+year;
 }
 
-function triangleArea(){
-	var inputs, index,x1,x2,x3,first,second,third;
-	inputs = document.querySelectorAll('input');
-	for(index=0;index<inputs.length;++index){
-		inputs[0]=x1;
-		inputs[1]=x2;
-		inputs[2]=x3;
-		first = x1; second=x2, third=x3;
-	}
-	console.log(first.second,third);
+function triangleArea(e){
+	e.preventDefault();
+	var inputOne,inputTwo,inputThree, semiperimeter, area,s, s1,s2,s3, areaRoot;
+
+	inputOne = document.querySelector('#inputOne').value;
+	inputTwo = document.querySelector('#inputTwo').value;
+	inoutThree = document.querySelector('#inputThree').value;
+	s1 = parseInt(inputOne); s2 = parseInt(inputTwo); s3 = parseInt(inoutThree);
+	semiperimeter = (s1 + s2 + s3) / 2;
+	s=semiperimeter;
+	area = s * (s-s1) * (s-s2) * (s-s3);
+	areaRoot = Math.sqrt(area);
+	document.querySelector('.areaAnswer').innerHTML = areaRoot;
+	// console.log(semiperimeter,area, areaRoot);
+	// console.log(inputOne, inputTwo, inoutThree);
 }
 })();
 
